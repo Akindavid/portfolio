@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+           
+        }
+
+        .header{ 
+            background-image: linear-gradient(rgba(128, 4, 0, 0.377), rgba(74, 75, 40, 0.452)), url("back.jpg");
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            overflow: auto;
+            
+        }
+
+        .navbar:-webkit-scrollbar{
+            display: none;
+        }
+
+        .navbar > *{
+            scroll-snap-align: start;
+        }
+
+        .navbar{
+            padding: 0.6rem 0.6rem;
+            background: rgba(0, 0, 0, 0.233);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            scroll-snap-type: inline mandatory;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        
+
+        .logo-ball{
+            width: 40px;
+            height: 40px;
+            background: rgb(253, 143, 143);
+            display: block;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 100%;
+            border-bottom-right-radius: 100%;
+            border-top-right-radius: 30%;
+            border-top-left-radius: 10%;
+            border: 2px solid rgb(184, 184, 108);
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+        
+        }
+
+        .right{
+            transition: all ease 0.5s;
+        }
+
+        .logo:hover .right{
+            width: 0;
+            height: 0;
+        }
+
+        .menu{
+            display: flex;
+            cursor: pointer;
+
+        }
+
+        .ul-main{
+            display: flex;
+        }
+
+        .ul-main li{
+            list-style: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            color: white;
+            border-bottom: 2px solid palevioletred;
+            border-radius: 5px;
+            padding: 0.3rem 0.7rem;
+            transition: all 0.5s solid;
+        }
+
+        .ul-main li:hover{
+            color: brown;
+            background: rgba(51, 51, 51, 0.486);
+
+        }
+
+        .logo h1{
+            color: wheat;
+        }
+        
+        .drop_down{
+            position: relative;
+        }
+
+        .drop_down:hover .drop{
+            display: block;
+        }
+
+        .drop{
+            position: absolute;
+            background: rgba(0, 0, 0, 0.425);
+            margin-left: -45px;
+            margin-top: 10px;
+            display: none;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+
+        }
+
+        .drop ul li{
+            border-bottom: none;
+           
+        }
+
+        .drop_down:hover ul li{
+            background: transparent;
+        }
+
+        .write-up{
+            margin-left: 8%;
+            margin-top: 15%;
+        }
+
+        .write-up h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+
+        }
+
+        .write-up h1 span{
+            color: rgb(240, 88, 88);
+            font-weight: bold;
+        }
+
+        .write-up p{
+            line-height: 22px;
+        }
+
+        .write-up a{
+            background: black;
+            padding: 10px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            display: inline-block;
+            margin: 30px 0;
+            border-radius: 5px;
+            transition: all 0.5s solid;
+        }
+
+        .write-up a:hover{
+            background: rgb(240, 88, 88);
+            transition: all 0.5s ease;
+        }
+
+       
+    </style>
+
+</head>
+<body>
+    
+    <div class="header">
+
+        <div class="navbar">
+
+            <div class="logo">
+                <span class="logo-ball right"></span>
+                <h1>IN_STORE</h1>
+                <span class="logo-ball"></span>
+            </div>
+            
+            <div class="menu">
+
+                <nav>
+                    <ul class="ul-main">
+                        <li>home</li>
+                        <li>product</li>
+                        <li class="drop_down">
+                            stock
+                            <div class="drop">
+                                <ul>
+                                    <li>lecture books</li>
+                                    <li>handouts</li>
+                                    <li>journals</li>
+                                    <li>research works</li>
+                                    <li>writing materials</li>
+                                    <li>past questions</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="drop_down">
+                            delivery
+                            <div class="drop">
+                                <ul>
+                                    <li>home delivery</li>
+                                    <li>pick up station</li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="drop_down">
+                            contact us
+                            <div class="drop">
+                                <ul>
+                                    <li>09031510856</li>
+                                    <li>akindavid06@gmail.com</li>
+                                    <li>in_store@gmail.com</li>
+                                </ul>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </nav>
+    
+            </div>
+    
+
+        </div>
+
+        <div class="write-up">
+            <h1>I,M <span>Akinyosola David</span></h1>
+            <p>this is my official portfolio website to show all my 
+                <br> product and services <br> all your accademic materials in one place </p>
+            <a href="">ORDER NOW</a>
+
+       
+    </div>
+
+   
+    </div>
+
+</body>
+</html>
